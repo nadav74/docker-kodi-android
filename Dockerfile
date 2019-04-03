@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Nadav Rephaelli
 
-VOLUME /source
+VOLUME /root/kodi
 
 RUN apt update && apt-get -y upgrade
 RUN apt -y install autoconf build-essential curl default-jdk gawk git gperf lib32stdc++6 lib32z1 lib32z1-dev libcurl4-openssl-dev unzip zlib1g-dev unzip wget python
