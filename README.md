@@ -31,6 +31,7 @@ Instructions:
        --host=arm-linux-androideabi --with-sdk-path=$HOME/android-tools/android-sdk-linux \
        --with-ndk-path=$HOME/android-tools/android-ndk-r18b \
        --with-toolchain=$HOME/android-tools/arm-linux-androideabi-vanilla/android-21 \
-       --prefix=$HOME/android-tools/xbmc-depends --enable-debug=no
+       --prefix=$HOME/android-tools/xbmc-depends --enable-debug=no && \
+       make -j$(getconf _NPROCESSORS_ONLN)
    - cd $HOME/kodi && make -j$(getconf _NPROCESSORS_ONLN) -C tools/depends/target/binary-addons (if it fails, launch make again)
    - make -C tools/depends/target/cmakebuildsys && cd $HOME/kodi/build && make -j$(getconf _NPROCESSORS_ONLN) && make apk
