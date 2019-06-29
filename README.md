@@ -1,4 +1,4 @@
-This repository provides an easy to set up build environment for Kodi 18.*-Leia for Android.
+This repository provides an easy to set up build environment for Kodi 18.\*-Leia for Android.
 Note: at this moment this has only been tested for the ARM platform.
 Note: this was only tested on 18.0 and forth and will NOT be tested for 18 beta or RC versions.
 
@@ -16,7 +16,7 @@ Instructions:
 
 3. Run the following command to start a shell on the container assuming you cloned Kodi to
    ~/github/xbmc (the ID could also just be "kodi"):
-   docker run -v ~/github/xbmc:/source -it <id_from_last_step> /bin/bash
+   docker run -v ~/github/xbmc:/root/kodi -it \<id_from_last_step\> /bin/bash
 
 4. Start step 5 from here:
    https://github.com/xbmc/Xbmc/blob/master/docs/README.Android.md#5-build-tools-and-dependencies
