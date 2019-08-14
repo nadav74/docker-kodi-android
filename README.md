@@ -1,8 +1,14 @@
 # docker-kodi-android
 
+## General
+
 This repository provides an easy to set up build environment for Kodi 18.\*-Leia for Android.
 Note: at this moment this has only been tested for the ARM platform.
 Note: this was only tested on 18.0 and forth and will NOT be tested for 18 beta or RC versions.
+
+## Versioning
+
+This repository follows the branching scheme of the `kodi` project.
 
 ## Prerequisite
 
