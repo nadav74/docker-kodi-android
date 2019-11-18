@@ -16,7 +16,7 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
 
 ## Instructions
 
-1. Create a debug signing key in the same directory as this file (see [here](https://github.com/xbmc/Xbmc/blob/master/docs/README.Android.md#33-set-up-the-android-toolchain):
+1. Create a debug signing key in the same directory as this file (see [here](https://github.com/xbmc/Xbmc/blob/master/docs/README.Android.md#33-set-up-the-android-toolchain). For this you need to have JDK intalled:
    ```
    keytool -genkey -keystore debug.keystore -v -alias androiddebugkey -dname "CN=Android Debug,O=Android,C=US" -keypass android -storepass android -keyalg RSA -keysize 2048 -validity 10000
    ```
