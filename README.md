@@ -39,7 +39,7 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
    ```
 
 5. Start step 5 from [here](https://github.com/xbmc/Xbmc/blob/master/docs/README.Android.md#5-build-tools-and-dependencies)   with the following notes:
-   - NDK is `r18b`, not `r18`, since r18 is no longer available for download.
+   - NDK is `r20`, not `r18`, since r18 is no longer available for download and 18.5-Leia does not compile with `r18b`
    - Add `--enable-debug=no` for a release build.
 
 6. So, a full transcript for ARM:
@@ -47,7 +47,7 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
    - ```
      ./configure --with-tarballs=$HOME/android-tools/xbmc-tarballs \
        --host=arm-linux-androideabi --with-sdk-path=$HOME/android-tools/android-sdk-linux \
-       --with-ndk-path=$HOME/android-tools/android-ndk-r18b \
+       --with-ndk-path=$HOME/android-tools/android-ndk-r20 \
        --with-toolchain=$HOME/android-tools/arm-linux-androideabi-vanilla/android-21 \
        --prefix=$HOME/android-tools/xbmc-depends --enable-debug=no && \
        make -j$(getconf _NPROCESSORS_ONLN)```
