@@ -22,8 +22,8 @@ ENV SDKMANAGER_HOME ${HOME}/android-tools/android-sdk-linux/tools/bin
 
 RUN ${SDKMANAGER_HOME}/sdkmanager --licenses
 RUN ${SDKMANAGER_HOME}/sdkmanager platform-tools
-RUN echo y | ${SDKMANAGER_HOME}/sdkmanager "platforms;android-26"
-RUN echo y | ${SDKMANAGER_HOME}/sdkmanager "build-tools;25.0.3"
+RUN echo y | ${SDKMANAGER_HOME}/sdkmanager "platforms;android-28"
+RUN echo y | ${SDKMANAGER_HOME}/sdkmanager "build-tools;28.0.3"
 
 # 'Set up the arm toolchain' per Kodi documentation
 RUN ${HOME}/android-tools/android-ndk-r20/build/tools/make-standalone-toolchain.sh --verbose --install-dir=${HOME}/android-tools/arm-linux-androideabi-vanilla/android-21 --platform=android-21 --toolchain=arm-linux-androideabi
