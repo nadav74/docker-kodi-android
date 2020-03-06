@@ -28,5 +28,5 @@ RUN echo y | ${SDKMANAGER_HOME}/sdkmanager "build-tools;28.0.3"
 # 'Set up the arm toolchain' per Kodi documentation
 RUN ${HOME}/android-tools/android-ndk-r20/build/tools/make-standalone-toolchain.sh --verbose --install-dir=${HOME}/android-tools/arm-linux-androideabi-vanilla/android-21 --platform=android-21 --toolchain=arm-linux-androideabi
 
-RUN keytool -genkey -keystore ${HOME}/.android/debug.keystore -v -alias androiddebugkey -dname "CN=Android Debug,O=Android,C=US" -keypass android -storepass android -keyalg RSA -keysize 2048 -validity 10000
+COPY debug.keystore ${HOME}/.android/debug.keystore
 
