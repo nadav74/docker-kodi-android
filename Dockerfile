@@ -1,10 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 MAINTAINER Nadav Rephaelli
 
 VOLUME /root/kodi
 
 RUN apt update && apt-get -y upgrade
-RUN apt -y install autoconf build-essential curl default-jdk gawk git gperf lib32stdc++6 lib32z1 lib32z1-dev libcurl4-openssl-dev unzip zlib1g-dev unzip wget python
+RUN DEBIAN_FRONTEND=noninteractive apt -y install autoconf build-essential curl openjdk-8-jdk gawk git gperf lib32stdc++6 lib32z1 lib32z1-dev libcurl4-openssl-dev unzip zlib1g-dev unzip wget python
 
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 RUN wget https://dl.google.com/android/repository/android-ndk-r20-linux-x86_64.zip
