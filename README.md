@@ -47,7 +47,7 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
    - ```
      ./configure --with-tarballs=$HOME/android-tools/xbmc-tarballs \
        --host=arm-linux-androideabi --with-sdk-path=$HOME/android-tools/android-sdk-linux \
-       --with-ndk-path=$HOME/android-tools/android-ndk-18b \
+       --with-ndk-path=$HOME/android-tools/android-ndk-r18b \
        --with-toolchain=$HOME/android-tools/arm-linux-androideabi-vanilla/android-21 \
        --prefix=$HOME/android-tools/xbmc-depends --enable-debug=no && \
        make -j$(getconf _NPROCESSORS_ONLN)```
