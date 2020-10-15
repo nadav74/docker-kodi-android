@@ -22,7 +22,11 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
    ```
    In order to be able to upgrade the compiled APK this file should always stay unchanged.
 
-2. Run the following command to build the Docker image:
+2. Pull the image from Docker Hub:
+   ```
+   docker pull nadav74/docker-kodi-android:18.8-Leia
+   ```
+   Or run the following command to build the Docker image yourself:
    ```
    docker build -t kodi .
    ```
@@ -32,12 +36,17 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
    If you checkout another version after a full build, your new build will fail at some point.
    If you know how to fix this, please do!
 
-4. Run the following command to start a shell on the container assuming you cloned Kodi to
+4.
+   If you pulled the image from Docker Hub, run the following command:
+   ```
+   docker run -v ~/github/xbmc:/root/kodi -it kodi:18.8-Leia /bin/bash
+   ```
+   Otherwise run the following command to start a shell on the container assuming you cloned Kodi to
    `~/github/xbmc` (the ID could also just be "kodi"):
    ```
    docker run -v ~/github/xbmc:/root/kodi -it \<id_from_last_step\> /bin/bash
    ```
-
+   
 5. Start step 5 from [here](https://github.com/xbmc/Xbmc/blob/master/docs/README.Android.md#5-build-tools-and-dependencies)   with the following notes:
    - NDK is `r18b`, since `r18` is no longer available for download.
    - Add `--enable-debug=no` for a release build.
