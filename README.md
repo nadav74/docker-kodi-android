@@ -16,13 +16,17 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
 
 ## Instructions
 
-1. Create a debug signing key in the same directory as this file (see [here](https://github.com/xbmc/Xbmc/blob/master/docs/README.Android.md#33-set-up-the-android-toolchain):
+1. Create a debug signing key in the same directory as this file (see [here](https://github.com/xbmc/Xbmc/blob/master/docs/README.Android.md#33-set-up-the-android-toolchain)). For this you need to have JDK intalled:
    ```
    keytool -genkey -keystore debug.keystore -v -alias androiddebugkey -dname "CN=Android Debug,O=Android,C=US" -keypass android -storepass android -keyalg RSA -keysize 2048 -validity 10000
    ```
    In order to be able to upgrade the compiled APK this file should always stay unchanged.
 
-2. Run the following command to build the Docker image:
+2. Pull the image from Docker Hub:
+   ```
+   docker pull nadav74/docker-kodi-android
+   ```
+   Or run the following command to build the Docker image yourself:
    ```
    docker build -t kodi .
    ```
@@ -32,7 +36,12 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
    If you checkout another version after a full build, your new build will fail at some point.
    If you know how to fix this, please do!
 
-4. Run the following command to start a shell on the container assuming you cloned Kodi to
+4.
+   If you pulled the image from Docker Hub, run the following command:
+   ```
+   docker run -v ~/github/xbmc:/root/kodi -it kodi /bin/bash
+   ```
+   Otherwise run the following command to start a shell on the container assuming you cloned Kodi to
    `~/github/xbmc` (the ID could also just be "kodi"):
    ```
    docker run -v ~/github/xbmc:/root/kodi -it \<id_from_last_step\> /bin/bash
