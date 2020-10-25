@@ -39,7 +39,7 @@ Install Docker Engine from [here](https://www.docker.com/products/docker-engine)
 4.
    If you pulled the image from Docker Hub, run the following command:
    ```
-   docker run -v ~/github/xbmc:/root/kodi -it kodi:18.8-Leia /bin/bash
+   docker run -v ~/github/xbmc:/root/kodi -it nadav74/docker-kodi-android:18.8-Leia /bin/bash
    ```
    Otherwise run the following command to start a shell on the container assuming you cloned Kodi to
    `~/github/xbmc` (the ID could also just be "kodi"):
