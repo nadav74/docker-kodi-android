@@ -4,7 +4,7 @@
 
 This repository provides an easy to set up build environment for Kodi for Android.
 Note: at this moment this has only been tested for the ARM platform.
-Note: this was only tested on 18.0 and forth and will NOT be tested for 18 beta or RC versions.
+Note: this was only tested on 18.0 and forth and will NOT be tested for beta or RC versions.
 
 ## Versioning
 
